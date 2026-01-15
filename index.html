@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología y Software</title>
+    <link rel="icon" href="icono.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+	<!-- PANTALLA DE BIENVENIDA -->
+	<div id="welcome-screen">
+		<div class="welcome-content">
+			<h1 id="welcome-text"></h1>
+		</div>
+	</div>
+
+		<!-- BANNER SUPERIOR -->
+	<div id="top-banner">
+		<div class="banner-content">
+		<strong>Tecnología y Software</strong>
+		</div>
+	</div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="container">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="mainNav">
+                    <li><a href="index.html" class="active">INICIO</a></li>
+                    <li><a href="tecnologia.html">TECNOLOGÍA</a></li>
+                    <li><a href="educacion.html">EDUCACIÓN</a></li>
+                    <li><a href="recomendaciones.html">RECOMENDACIONES</a></li>
+                    <li><a href="recursos.html">RECURSOS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Conectando ideas y futuro</h1>
+            <p>La educación evoluciona, y tú eres parte del cambio.</p>
+        </div>
+    </section>
+
+    <!-- Servicios Destacados -->
+    <section class="services-highlight">
+        <div class="container">
+            <h2 class="section-title">La fuerza de la tecnología en tu día a día</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovación digital</h3>
+                    <p>Descubre cómo las nuevas herramientas y avances tecnológicos transforman la manera de aprender, comunicarte y crear. La innovación está presente en cada paso que das hacia tu futuro.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Software que potencia tu aprendizaje</h3>
+                    <p>Desde aplicaciones básicas hasta plataformas avanzadas, el software se convierte en tu aliado para organizar tareas, mejorar tu productividad y desarrollar nuevas habilidades.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Conexión segura y responsable</h3>
+                    <p>La tecnología abre puertas, pero también exige responsabilidad. Aprende a usarla de forma consciente, cuidando tu seguridad digital y aprovechando al máximo sus beneficios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventajas -->
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title">Tecnología que transforma tu forma de aprender</h2>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <h3><i class="fas fa-brain fa-2x text-primary"></i> Herramientas que te entienden</h3>
+                    <p>Usa plataformas diseñadas para facilitar tu estudio, organizar tus ideas y mejorar tu productividad. La tecnología se adapta a ti, no al revés.</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <h3><i class="fas fa-eye fa-2x text-primary"></i> Aprendizaje más visual y dinámico</h3>
+                    <p>Descubre nuevas formas de entender conceptos complejos con recursos interactivos y entornos digitales que hacen el conocimiento más accesible.</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <h3><i class="fas fa-globe fa-2x text-primary"></i> Conectividad sin límites</h3>
+                    <p>Accede a contenidos desde cualquier lugar y dispositivo. Estudia, comparte y colabora en tiempo real, sin barreras físicas ni horarios rígidos.</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <h3><i class="fas fa-rocket fa-2x text-primary"></i> Preparación para el futuro</h3>
+                    <p>El conocimiento tecnológico abre puertas en el estudio y en el trabajo. Lo que aprendes hoy será tu ventaja mañana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Videos -->
+    <section class="services-highlight">
+        <div class="container">
+            <h2 class="section-title">Tecnología al servicio del conocimiento</h2>
+
+            <div class="video-container">
+                <iframe
+                    loading="lazy"
+                    src="https://www.canva.com/design/DAG-cp9qjsc/MvPGSviNIVZsBKxNjgHgyQ/watch?embed"
+                    allowfullscreen
+                    allow="fullscreen">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+	<script>
+	window.onload = function () {
+		let nombre = prompt("¿Cuál es tu nombre?");
+
+		if (nombre && nombre.trim() !== "") {
+		const welcomeScreen = document.getElementById("welcome-screen");
+		const welcomeText = document.getElementById("welcome-text");
+
+		welcomeText.innerHTML = `Bienvenid@ <strong>${nombre}</strong>,<br>
+		te doy la bienvenida a
+		<span class="welcome-slide">Tecnología y Software </span>`;
+
+		welcomeScreen.classList.add("active");
+
+		// Ocultar después de 5 segundos
+		setTimeout(() => {
+			welcomeScreen.classList.remove("active");
+		}, 5000);
+		}
+	};
+	</script>
+
+</body>
+</html>
